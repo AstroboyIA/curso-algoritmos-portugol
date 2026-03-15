@@ -1,0 +1,32 @@
+algoritmo "Problema Tempo de jogo"
+
+var
+
+  horaInicial, horaFinal, duracao : inteiro
+
+inicio
+
+  escreval("Digite a hora que o jogo começou: ")
+  leia(horaInicial)
+  escreval("Digite a hora que o jogo acabou: ")
+  leia(horaFinal)
+
+  se horaFinal < horaInicial entao
+
+    duracao <- (24 - horaInicial) + horaFinal
+
+  senao se horaFinal = horaInicial entao
+
+    duracao <- 24
+
+  senao
+
+    duracao <- horaFinal - horaInicial
+
+  fimse
+
+fimse
+
+escreval("O jogo durou ", duracao " HORA(S)")
+
+fimalgoritmo

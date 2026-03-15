@@ -1,0 +1,32 @@
+algoritmo "Problema Operadora"
+
+var
+
+  quantidade : inteiro
+  minutosAdicional : inteiro
+  valorAdicional : real
+  valorMinutoAdicional : real
+  valorBase : real
+  valorPagamento : real
+
+inicio
+
+  valorBase <- 50.00
+  valorMinutoAdicional <- 2.00
+  escreval("Digite a quantidade de minutos: ")
+  leia(quantidade)
+
+  se quantidade > 100 entao
+
+    minutosAdicional <- quantidade - 100
+
+  fimse
+
+  valorAdicional <- minutosAdicional * valorMinutoAdicional
+
+  valorPagamento <- valorBase + valorAdicional
+
+  escreval("Quantidade de minutos= ", quantidade)
+  escreval("Valor a pagar = ", valorPagamento)
+
+fimalgoritmo

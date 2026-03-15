@@ -1,0 +1,37 @@
+algoritmo "Problema Troco Verificado"
+
+var
+
+  quantidade : inteiro
+  precoProduto : real
+  precoPagar : real
+  recebido : real
+  troco : real
+
+inicio
+
+  escreval("Digite o preço do produto: ")
+  leia(precoProduto)
+  escreval("Digite a quantidade comprada: ")
+  leia(quantidade)
+  escreval("Digite o valor recebido: ")
+  leia(recebido)
+
+  precoPagar <- precoProduto * quantidade
+
+  se precoPagar > recebido entao
+
+    troco <- precoPagar - recebido
+    escreval("Dinheio insuficiente. Faltam ", troco:1:2 " REAIS")
+
+  senao se recebido > precoPagar entao
+
+    troco <- recebido - precoPagar
+
+    escreval("Troco = ", troco:1:2)
+
+  fimse
+  
+fimse
+
+fimalgoritmo

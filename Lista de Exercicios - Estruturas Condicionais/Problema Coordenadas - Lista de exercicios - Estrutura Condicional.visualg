@@ -1,0 +1,57 @@
+algoritmo "Problema Coordenadas"
+
+var
+
+  x, y : real
+  posicao : caractere
+
+inicio
+
+  escreval("Digite o valor de X: ")
+  leia(x)
+  escreval("Digite o valor de Y: ")
+  leia(y)
+
+  se (x > 0) e (y > 0) entao
+
+    posicao <- "Q1"
+
+  senao se (x < 0) e (y > 0) entao
+
+    posicao <- "Q2"
+
+  senao se (x < 0) e (y < 0) entao
+
+    posicao <- "Q3"
+
+  senao se (x > 0) e (y < 0) entao
+
+    posicao <- "Q4"
+
+  senao se (x = 0) e (y <> 0) entao
+
+    posicao <- "Eixo Y"
+
+  senao se (x <> 0) e (y = 0) entao
+
+    posicao <- "Eixo X"
+
+  senao
+
+    posicao <- "Origem"
+
+  fimse
+
+fimse
+
+fimse
+
+fimse
+
+fimse
+
+fimse
+
+escreval(posicao)
+
+fimalgoritmo

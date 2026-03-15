@@ -1,0 +1,29 @@
+algoritmo "Problema Notas"
+
+var
+
+  nota1 : real
+  nota2 : real
+  notaFinal : real
+
+inicio
+
+  escreval("Digite a nota 1: ")
+  leia(nota1)
+  escreval("Digite a nota 2: ")
+  leia(nota2)
+
+  notaFinal <- nota1 + nota2
+
+  se notaFinal < 60 entao
+
+    escreval("Nota final = ", notaFinal)
+    escreval("Reprovado")
+
+  senao
+
+    escreval("Nota final = ", notaFinal)
+
+  fimse
+
+fimalgoritmo

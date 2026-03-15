@@ -1,0 +1,34 @@
+algoritmo "Problema Temperaura"
+
+var
+
+  tempF, tempC : real
+  x : inteiro
+
+inicio
+
+  escreval("Qual escala de temperatura irá ser convertida?: ")
+  escreval("1 - Fahrenheit")
+  escreval("2 - Celsius")
+  leia(x)
+  
+  escolha x
+  caso 1
+  escreval("Digite a temperatura: ")
+  leia(tempF)
+  
+  tempC <- 5/9*(tempF - 32)
+
+  escreval("Temperatura equivalente em Celsius = ", tempC:1:2)
+
+  caso 2
+  escreval("Digite a temperatura: ")
+  leia(tempC)
+
+  tempF <- (9/5*tempC) + 32
+
+  escreval("Temperatura equivalente em Fahrenheit = ", tempF:1:2)
+
+  fimescolha
+
+fimalgoritmo

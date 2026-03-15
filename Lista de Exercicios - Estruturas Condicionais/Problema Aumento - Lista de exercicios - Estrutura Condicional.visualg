@@ -1,0 +1,45 @@
+algoritmo "Problema Aumento"
+
+var
+
+  salarioAtual, novoSalario, aumento : real
+  porcentagem : caractere
+
+inicio
+
+  escreval("Digite o salário atual: ")
+  leia(salarioAtual)
+
+  se salarioAtual <= 1000 entao
+
+    novoSalario <- salarioAtual + (salarioAtual * (20 / 100))
+    porcentagem <- "20%"
+
+  senao se salarioAtual <= 3000 entao
+
+    novoSalario <- salarioAtual + (salarioAtual * (15 / 100))
+    porcentagem <- "15%"
+
+  senao se salarioAtual <= 8000 entao
+
+    novoSalario <- salarioAtual + (salarioAtual * (10 / 100))
+    porcentagem <- "10%"
+
+  senao
+
+    novoSalario <- salarioAtual + (salarioAtual * (5 / 100))
+    porcentagem <- "5%"
+
+  fimse
+
+fimse
+
+fimse
+
+aumento <- novoSalario - salarioAtual
+
+escreval("Novo salário = ", novoSalario:1:2)
+escreval("Aumento = ", aumento:1:2)
+escreval("Porcentagem = ", porcentagem)
+
+fimalgoritmo

@@ -1,0 +1,39 @@
+algoritmo "Problema Menor de Três"
+
+var
+
+  valor1 : inteiro
+  valor2 : inteiro
+  valor3 : inteiro
+  menor : inteiro
+
+inicio
+
+  escreval("Digite o primeiro valor: ")
+  leia(valor1)
+  escreval("Digite o segundo valor: ")
+  leia(valor2)
+  escreval("Digite o terceiro valor: ")
+  leia(valor3)
+
+  menor <- valor1
+
+  se menor > valor2 entao
+
+    menor <- valor2
+
+  fimse
+
+  se menor > valor3 entao
+
+    menor <- valor3
+
+  fimse
+
+
+  escreval("Primeiro valor = ", valor1)
+  escreval("Segundo valor = ", valor2)
+  escreval("Terceiro valor = ", valor3)
+  escreval("Menor = ", menor)
+
+fimalgoritmo
