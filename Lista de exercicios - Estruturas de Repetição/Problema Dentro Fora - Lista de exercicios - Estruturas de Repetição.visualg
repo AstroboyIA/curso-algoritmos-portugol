@@ -1,0 +1,34 @@
+algoritmo "Problema Dentro-Fora"
+
+var
+
+  n, x, i, dentro, fora: inteiro
+
+inicio
+
+  escreval("Quantos numeros você vai digitar?: ")
+  leia(n)
+
+  dentro <- 0
+  fora <- 0
+  para i de 1 ate n faca
+
+    Escreval("Digite um numero: ")
+    leia(x)
+
+    se x > 9 e x < 21 entao
+
+      dentro <- dentro + 1
+
+    senao
+
+      fora <- fora + 1
+
+    fimse
+
+  fimpara
+
+  escreval(dentro, " DENTRO")
+  escreval(fora, " FORA")
+
+fimalgoritmo

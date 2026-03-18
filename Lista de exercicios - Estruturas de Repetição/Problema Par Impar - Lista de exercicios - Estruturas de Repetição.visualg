@@ -1,0 +1,51 @@
+algoritmo "Problema Dentro-Fora"
+
+var
+
+  n, x, i : inteiro
+  par, impar, POS, NEG : caractere
+
+inicio
+
+  escreval("Quantos numeros você vai digitar?: ")
+  leia(n)
+
+  par <- "PAR"
+  impar <- "IMPAR"
+  POS <- "POSITIVO"
+  NEG <- "NEGATIVO"
+
+  para i de 1 ate N faca
+
+    Escreval("Digite um numero: ")
+    leia(x)
+
+    se x = 0 entao
+
+      escreval("NULO")
+
+    senao se x mod 2 = 0 e x > 0 entao
+
+      escreval(par, " ", POS)
+
+    senao se x mod 2 = 0 e x < 0 entao
+
+      escreval(par, " ", NEG)
+
+    senao se x mod 2 <> 0 e x > 0 entao
+
+      escreval(impar ," ", POS)
+
+    senao se x mod 2 <> 0 e x < 0 entao
+
+      escreval(impar, " ", NEG)
+
+    fimse
+  fimse
+fimse
+fimse
+fimse
+
+fimpara
+
+fimalgoritmo
