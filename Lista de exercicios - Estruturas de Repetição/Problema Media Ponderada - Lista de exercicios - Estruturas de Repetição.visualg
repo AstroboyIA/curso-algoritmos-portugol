@@ -1,0 +1,31 @@
+algoritmo "Problema Media Ponderada"
+
+var
+
+  n, i : inteiro
+  n1, n2, n3, valor1, valor2, valor3, soma, x : real
+
+inicio
+
+  escreval("Quantos casos você vai digitar?: ")
+  leia(n)
+
+  para i de 1 ate N faca
+
+    Escreval("Digite três numero: ")
+    leia(n1)
+    leia(n2)
+    leia(n3)
+
+    valor1 <- n1 * 2
+    valor2 <- n2 * 3
+    valor3 <- n3 * 5
+    soma <- 2 + 3 + 5
+
+    x <- ( valor1 + valor2 + valor3 ) / soma
+
+    escreval("MEDIA = ", x:1:1)
+
+  fimpara
+
+fimalgoritmo

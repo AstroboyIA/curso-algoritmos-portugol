@@ -1,0 +1,61 @@
+algoritmo "Problema Experiencias"
+
+var
+
+  x, n, i, quant, rato, sapo, coelho, contador : inteiro
+  percentRatos, percentSapos, percentCoelhos : real
+  type : caractere
+
+inicio
+
+  rato <- 0
+  coelho <- 0
+  sapo <- 0
+  contador <- 0
+
+  escreval("Quantos casos de testes serão digitados?: ")
+  leia(n)
+
+  para i de 1 ate n faca
+
+    escreval("Quantidade de cobaias: ")
+    leia(quant)
+    escreval("Tipo de cobaia: ")
+    leia(type)
+
+    contador <- contador + quant
+
+    se type = "C" entao
+
+      coelho <- coelho + quant
+
+    senao se type = "R" entao
+
+      rato <- rato + quant
+
+    senao se type = "S" entao
+
+      sapo <- sapo + quant
+
+    fimse
+  fimse
+fimse
+
+fimpara
+
+x <- sapo + rato + coelho
+
+percentCoelhos <- (coelho / x) * 100
+percentRatos <- (rato / x) * 100
+percentSapos <- (sapo / x) * 100
+
+escreval("RELATORIO FINAL: ")
+escreval("Total de cobaias: ", contador)
+escreval("Total de coelhos: ", coelho)
+escreval("Total de ratos: ", rato)
+escreval("Total de sapos: ", sapo)
+escreval("Percentual de coelhos: ", percentCoelhos:1:2)
+escreval("Percentual de ratos: ", percentRatos:1:2)
+escreval("Percentual de sapos: ", percentSapos:1:2)
+
+fimalgoritmo

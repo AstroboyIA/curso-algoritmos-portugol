@@ -1,0 +1,31 @@
+algoritmo "Problema Fatorial"
+
+var
+
+  n, i, fat : inteiro
+
+inicio
+
+  escreval("Digite o valor de N: ")
+  leia(n)
+
+  fat <- 1
+
+  se n = 0 entao
+
+    escreval("FATORIAL = 1")
+  senao
+    se n = 1 entao
+
+      escreval("FATORIAL = 1")
+    senao
+      para i de 1 ate n faca
+
+        fat <- fat * i
+      fimpara
+
+      escreval("FATORIAL = ", fat)
+    fimse
+  fimse
+
+fimalgoritmo
