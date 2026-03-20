@@ -1,0 +1,37 @@
+algoritmo "Problema Negativos"
+
+var
+
+  n, i : inteiro
+  soma, media, valores : real
+  vet : vetor[0 .. 9] de real
+
+inicio
+
+  soma <- 0
+  media <- 0
+
+  escreval("Quantos números você vai digitar?: ")
+  leia(n)
+
+  para i de 0 ate n-1 faca
+
+    escreval("Digite um número: ")
+    leia(vet[i])
+    soma <- soma + vet[i]
+  fimpara
+
+  escreva("VALORES = ")
+  para i de 0 ate n-1 faca
+
+    escreva(vet[i]:3:1, " ")
+    
+  fimpara
+
+  media <- soma / n
+  
+  escreval
+  escreval("SOMA = ", soma:1:2)
+  escreva("MÉDIA = ", media:1:2)
+
+fimalgoritmo
