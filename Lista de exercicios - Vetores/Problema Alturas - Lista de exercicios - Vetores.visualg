@@ -1,0 +1,52 @@
+algoritmo "Problema Alturas"
+
+var
+
+  n, i : inteiro
+  somaPercentMenos16, media : real
+  vetAltura : vetor[0 .. 9] de real
+  vetNome : vetor[0 .. 9] de caractere
+  vetIdade : vetor[0 .. 9] de inteiro
+  vetIdadeMenor16 : vetor[0 .. 9] de caractere
+
+inicio
+
+  somaPercentMenos16 <- 0
+  media <- 0
+
+  escreval("Quantos números você vai digitar?: ")
+  leia(n)
+
+  media <- 0.0
+
+  para i de 0 ate n-1 faca
+
+    escreval("Digite os dados da ", i+1, "ª pessoa: ")
+    escreval("Nome: ")
+    leia(vetNome[i])
+    escreval("Idade: ")
+    leia(vetIdade[i])
+    escreval("Altura: ")
+    leia(vetAltura[i])
+
+    media <- media + vetAltura[i]
+
+    se vetIdade[i] < 16 entao
+
+      vetIdadeMenor16[i] <- vetNome[i]
+      somaPercentMenos16 <- somaPercentMenos16 + 1
+    fimse
+  fimpara
+
+  escreval("Altura média = ", media/n:1:2)
+  escreval("Pessoas com menos de 16 anos: "(somaPercentMenos16/n)*100, "%")
+
+  se somaPercentMenos16 > 0 entao
+    para i de 0 ate somaPercentMenos16 faca
+
+      escreval(vetIdadeMenor16[i])
+    fimpara
+  senao
+  fimse
+
+fimalgoritmo
